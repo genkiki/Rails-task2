@@ -1,2 +1,36 @@
-<h1>Top#index</h1>
-<p>Find me in app/views/top/index.html.erb</p>
+<div class="hero">
+    <div class="entrance-area">
+        <h1>Hotel Reserveでまだ体験したことのない旅をしよう</h1>
+        <p>エリア</p>
+        <%= form_tag("",:method => 'get') do %>
+            <%= text_field_tag :search, nil, class: "search-text", placeholder: "東京" %>
+            <%= submit_tag '探す', :name => nil, class: "search-btn"%>
+        <% end %>
+    </div>
+</div>
+
+<div class="recommend-area">
+    <h2>おすすめのエリア</h2>
+    <ul class="area-list">
+        <li class="area">
+            <%= link_to nil, class: "area-link" do %>
+                <img src="assets/img_tokyo.jpg" alt="" class="area-img">
+            <% end %>
+        </li>
+        <li class="area">
+            <%= link_to nil, class: "area-link" do %>
+                <img src="assets/img_osaka.jpg" alt="" class="area-img">
+            <% end %>
+        </li>
+        <li class="area">
+            <%= link_to nil, class: "area-link" do %>
+                <img src="assets/img_kyoto.jpg" alt="" class="area-img">
+            <% end %>
+        </li>
+        <li class="area">
+            <%= link_to nil, class: "area-link" do %>
+                <img src="assets/img_sapporo.jpg" alt="" class="area-img">
+            <% end %>
+        </li>
+    </ul>
+</div>
