@@ -1,0 +1,61 @@
+// Place all the styles related to the Hotels controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+    padding: 30px 60px;
+}
+
+.index-result-count {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
+}
+
+.index-search-result {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.index-hotel {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-right: 15px;
+    margin-bottom: 12px;
+    width: 22%;
+    border: 1px solid gray;
+}
+
+.index-img-hotel {
+    width: 100%;
+}
+
+.index-hotel-text-area {
+    padding-left: 15px;
+    padding-right: 10px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    line-height: 18px;
+}
+
+.index-name {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #909090;
+}
+
+.index-place {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+}
+
+.index-price {
+    text-align: right;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+}

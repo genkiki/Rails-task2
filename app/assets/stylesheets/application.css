@@ -18,3 +18,14 @@
     padding: 0px;
     margin: 0px;
 }
+
+header {
+    height: 70px;
+    background-color: black;
+    display: flex;
+}
+
+footer {
+    height: 180px;
+    background-color: black;
+}

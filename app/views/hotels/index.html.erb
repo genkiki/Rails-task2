@@ -1,0 +1,15 @@
+<div class="container">
+<h1 class="index-result-count">検索結果：<%= @search_result.size %>件</h1>
+    <div class="index-search-result">
+        <% @search_result.each do |hotel| %>
+            <div class="index-hotel">
+                <img src="" alt="" class="index-img-hotel">
+                <div class="index-hotel-text-area">
+                    <p class="index-name"><%= hotel.name %></p>
+                    <p class="index-place"><%= hotel.place %></p>
+                    <p class="index-price">¥<%= hotel.price %></p>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
