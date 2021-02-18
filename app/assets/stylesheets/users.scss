@@ -40,3 +40,29 @@ span {
     height: 38px;
     width: 80%;
 }
+
+.signin-form-area {
+    width: 600px;
+    margin: 40px auto 100px;
+    padding: 47px 120px 25px;
+    border: 1px solid gray;
+}
+
+.signin-form-area p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.signin-link {
+    text-decoration: none;
+    margin-top: 23px;
+    text-align: center;
+    display: block;
+}
+
+.signin-email, .signin-password {
+    height: 38px;
+    width: 80%;
+}
