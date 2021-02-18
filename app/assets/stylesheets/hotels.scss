@@ -59,3 +59,99 @@
     font-size: 16px;
     color: #333333;
 }
+
+.show-container {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+
+.show-top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.show-hotel-img {
+    width: 750px;
+    height: auto;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.show-reserve-info {
+    width: 360px;
+    padding: 20px 20px 40px;
+    border: 1px solid gray;
+}
+
+.show-reserve-info p {
+    margin-bottom: 24px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.show-form-label {
+    margin-bottom: 10px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.show-form-calender, .show-form-count {
+    width: 100%;
+    margin-bottom: 25px;
+    height: 37px;
+}
+
+.btn {
+    width: 100%;
+}
+
+.show-hotel-info {
+    display: flex;
+    margin-top: 28px;
+    margin-bottom: 30px;
+}
+
+.show-owner-icon {
+    border-radius: 50%;
+    width: 67px;
+    height: 67px;
+}
+
+.show-owner-icon-area {
+    margin-right: 27px;
+}
+
+.show-hotel-discription {
+    border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.show-hotel-name {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.show-hotel-place {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.show-hotel-discription {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}

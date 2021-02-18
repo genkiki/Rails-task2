@@ -1,0 +1,34 @@
+
+
+<div class="show-container">
+    <div class="show-top">
+        <img src="/assets/test_room.jpg" alt="" class="show-hotel-img">
+        <div class="show-reserve-info">
+            <p>¥<%= @hotel.price %>/日</p>
+
+            <%= form_for "" do |f| %>
+                <%= f.label :start, '開始日', class: 'show-form-label' %>
+                <%= f.date_field :start , class: 'show-form-calender' %>
+                <%= f.label :end, '終了日', class: 'show-form-label' %>
+                <%= f.date_field :end , class: 'show-form-calender' %>
+                <%= f.label :count, '人数', class: 'show-form-label' %>
+                <%= f.text_field :count , class: 'show-form-count' %>
+                <%= f.submit "予約する", class: 'btn btn-primary' %>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="show-hotel-info">
+        <div class="show-owner-icon-area">
+            <img src="/assets/default_icon.jpg" alt="" class="show-owner-icon">
+        </div>
+        <div>
+        <p class="show-hotel-name"><%= @hotel.name %></p>
+        <p class="show-hotel-place"><%= @hotel.place %></p>
+        </div>
+    </div>
+    <div class="show-hotel-discription">
+        <p><%= @hotel.discription %></p>
+    </div>
+</div>
+
