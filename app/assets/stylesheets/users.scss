@@ -1,0 +1,42 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #333333;
+}
+
+.signup-form-area {
+    width: 600px;
+    margin: 40px auto 100px;
+    padding: 47px 120px 25px;
+    border: 1px solid gray;
+}
+
+.signup-form-area p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.signup-link {
+    text-decoration: none;
+    margin-top: 23px;
+    text-align: center;
+    display: block;
+}
+
+span {
+    margin-right: 15px;
+}
+
+.input-form {
+    margin-bottom: 12px;
+}
+
+.signup-name, .signup-email, .signup-password, .signup-password-confirmation {
+    height: 38px;
+    width: 80%;
+}
