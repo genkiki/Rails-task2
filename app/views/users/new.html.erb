@@ -1,6 +1,6 @@
 <div class="signup-form-area">
     <p>新しいアカウントを作成</p>
-    <%= form_for "/users", html: {method: "post"} do |f| %>
+    <%= form_with url: users_path do |f| %>
         <div class="input-form">
             <span class="badge bg-danger">必須</span><%= f.text_field :name, placeholder: 'ユーザー名', class: 'signup-name' %>
         </div>
