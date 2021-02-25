@@ -66,3 +66,63 @@ span {
     height: 38px;
     width: 80%;
 }
+
+.posts-hotel-container {
+    padding-left: 60px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #333333;
+}
+
+.posts-hotel-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 500;
+}
+
+.posts-hotel-list {
+    margin-bottom: 90px;
+    table-layout: auto;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-right: none;
+    border-left: none;
+    // border-collapse: separate;
+    // border-spacing: 2px;
+}
+
+.posts-hotel-list tr {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-right: none;
+    border-left: none;
+}
+
+.posts-hotel-list tbody tr td {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+td {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+th, td {
+    padding: 10px 15px;
+}
+
+.name-cell {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+}

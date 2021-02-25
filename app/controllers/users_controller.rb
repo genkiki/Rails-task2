@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+
   def create
     puts 'start create !!!!!!!'
     @user = User.new(name: params[:name], email: params[:email], password: params[:password])
@@ -15,5 +16,11 @@ class UsersController < ApplicationController
       puts "create failed !!!!!!!!"
       redirect_to '/users/new'
     end
+  end
+
+  def posts
+    puts 'start users#posts !!!!!!!!!!'
+    @user_id = 1 #test code.
+    @regist_hotels = Hotel.where(user_id: @user_id)
   end
 end

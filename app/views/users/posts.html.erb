@@ -1,0 +1,31 @@
+
+<div class="posts-hotel-container">
+    <h2 class="posts-hotel-title">登録済みルーム一覧</h2>
+
+    <table class="posts-hotel-list">
+        <thead>
+            <tr>
+                <th class="image-icon-header">ルーム画像</th>
+                <th class="name-header">ルーム名</th>
+                <th class="discription-header">ルーム紹介</th>
+                <th class="price-header">料金</th>
+                <th class="created-at-header">作成日</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @regist_hotels.each do |hotel| %>
+                <tr>
+                    <td class="image-icon-cell"><%= hotel.image_icon %></td>
+                    <td class="name-cell">
+                    <%= link_to hotel_path(hotel.id) do %>
+                    <%= hotel.name %>
+                    <% end %>
+                    </td>
+                    <td class="discription-cell"><%= hotel.discription %></td>
+                    <td class="price-cell"><%= hotel.price %></td>
+                    <td class="created-at-cell"><%= hotel.created_at %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
