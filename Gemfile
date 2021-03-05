@@ -46,6 +46,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.6.0'
 
   gem 'bcrypt'
+  gem 'ransack'
 end
 
 group :development do
