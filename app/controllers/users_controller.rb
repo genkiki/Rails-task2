@@ -47,4 +47,9 @@ class UsersController < ApplicationController
     @user_id = 1 #test code.
     @regist_hotels = Hotel.where(user_id: @user_id)
   end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to "/"
+  end
 end

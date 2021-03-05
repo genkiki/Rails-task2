@@ -3,12 +3,14 @@
     <div class="index-search-result">
         <% @search_hotel.each do |hotel| %>
             <div class="index-hotel">
-                <img src="" alt="" class="index-img-hotel">
-                <div class="index-hotel-text-area">
-                    <p class="index-name"><%= hotel.name %></p>
-                    <p class="index-place"><%= hotel.place %></p>
-                    <p class="index-price">¥<%= hotel.price %></p>
-                </div>
+                <%= link_to hotel_path(hotel.id) do %>
+                    <img src="" alt="" class="index-img-hotel">
+                    <div class="index-hotel-text-area">
+                        <p class="index-name"><%= hotel.name %></p>
+                        <p class="index-place"><%= hotel.place %></p>
+                        <p class="index-price">¥<%= hotel.price %></p>
+                    </div>
+                <% end %>
             </div>
         <% end %>
     </div>
