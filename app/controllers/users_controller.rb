@@ -42,6 +42,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @login_user = User.find_by(id: session[:user_id])
+  end
+
+  def profile
+
+  end
+
   def posts
     puts 'start users#posts !!!!!!!!!!'
     @user_id = 1 #test code.

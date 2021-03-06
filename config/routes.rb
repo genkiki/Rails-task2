@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :users
 
   get '/users/:id/posts', to: 'users#posts'
+  get '/users/:id/profile', to: 'users#profile'
 end
