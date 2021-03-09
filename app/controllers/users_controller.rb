@@ -47,7 +47,22 @@ class UsersController < ApplicationController
   end
 
   def profile
+    @login_user = User.find_by(id: session[:user_id])
+  end
 
+  def profile_edit
+    puts "profile_edit start !!!!!!"
+    update_user = User.find_by(id: params[:id])
+    update_user.name = params[:name]
+    update_user.self_introduction = params[:self_introduction]
+
+    if update_user.save
+      flash[:notice] = "更新成功しました"
+      render "/users/#{update_user.id}/profile"
+    else
+      flash[:notice] = "更新失敗しました"
+      render "/users/#{update_user.id}/profile"
+    end
   end
 
   def posts
@@ -59,5 +74,9 @@ class UsersController < ApplicationController
   def destroy
     session[:user_id] = nil
     redirect_to "/"
+  end
+
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :img)
   end
 end
