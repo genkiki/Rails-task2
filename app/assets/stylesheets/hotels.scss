@@ -155,3 +155,86 @@
     font-size: 16px;
     line-height: 30px;
 }
+
+
+// ホテル登録画面
+
+.hotel-regist-container {
+    display: flex;
+}
+
+.hotel-regist-menu-list-area {
+    min-width: 15%;
+    border-right: 1px solid gray;
+}
+
+.hotel-regist-menu-list {
+    display: block;
+    margin-top: 40px;
+}
+
+.hotel-regist-menu-list li {
+    margin-bottom: 15px;
+}
+
+.hotel-regist-menu-list li a {
+    text-decoration: none;
+}
+
+.hotel-regist-info-area {
+    background-color: #F6F8F9;
+    width: 100%;
+    height: 800px;
+    padding: 30px 200px 0px 0px;
+}
+
+.hotel-regist-info {
+    max-width: 66%;
+    margin-left: 200px;
+    padding: 20px;
+    background-color: white;
+}
+
+.hotel-regist-edit-btn {
+    width: 140px;
+    margin-top: 20px;
+}
+
+.hotel-regist-info-table {
+    width: 100%;
+}
+
+.hotel-regist-info-table tr {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.hotel-regist-info-table tr th {
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    width: 200px
+}
+
+.hotel-regist-info-table tr td {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.hotel-regist-info-table tr th, .hotel-regist-info-table tr td {
+    padding: 20px 30px 20px 30px;
+}
+
+.hotel-img-area {
+    text-align: center;
+}
+
+.hotel-image-remove {
+    margin-top: 15px;
+}
+
+.hotel-regist-name, .hotel-regist-intro {
+    width: 100%;
+}

@@ -38,7 +38,7 @@
               <ul class="hidden_show header-menu-list">
                 <li><%= link_to "ルーム登録", new_hotel_path %></li>
                 <li><%= link_to "予約済みルーム一覧", reserve_infos_path %></li>
-                <li><%= link_to "登録済みルーム一覧", "/user/#{current_user.id}/posts" %></li>
+                <li><%= link_to "登録済みルーム一覧", "/users/#{current_user.id}/posts" %></li>
                 <li><%= link_to "設定", user_path(current_user.id) %></li>
                 <li><%= link_to "ログアウト", user_path(current_user.id), method: "delete" %></li>
               </ul>

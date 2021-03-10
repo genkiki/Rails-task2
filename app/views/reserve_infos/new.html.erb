@@ -1,2 +1,19 @@
-<h1>ReserveInfos#new</h1>
-<p>Find me in app/views/reserve_infos/new.html.erb</p>
+<div class="signup-form-area">
+    <p>新しいアカウントを作成</p>
+    <%= form_with url: users_path do |f| %>
+        <div class="input-form">
+            <span class="badge bg-danger">必須</span><%= f.text_field :name, placeholder: 'ユーザー名', class: 'signup-name' %>
+        </div>
+        <div class="input-form">
+            <span class="badge bg-danger">必須</span><%= f.text_field :email, placeholder: 'メールアドレス', class: 'signup-email' %> <br>
+        </div>
+        <div class="input-form">
+            <span class="badge bg-danger">必須</span><%= f.text_field :password, placeholder: 'パスワード', class: 'signup-password' %> <br>
+        </div>
+        <div class="input-form">
+            <span class="badge bg-danger">必須</span><%= f.text_field :password_confirmation, placeholder: 'パスワード確認', class: 'signup-password-confirmation' %> <br>
+        </div>
+        <%= f.submit "新しいアカウントを作成", class: 'btn btn-primary' %> <br>
+    <% end %>
+    <%= link_to '既にアカウントをお持ちの方はログイン', '/users/sign_in', class: 'text-primary signup-link' %>
+</div>

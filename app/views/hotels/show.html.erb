@@ -4,6 +4,7 @@
     <div class="show-top">
         <img src="/assets/test_room.jpg" alt="" class="show-hotel-img">
         <div class="show-reserve-info">
+            <% puts "price:#{@hotel.price}!!!!!!"  %>
             <p>¥<%= @hotel.price %>/日</p>
 
             <%= form_for "" do |f| %>

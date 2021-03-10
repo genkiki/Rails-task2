@@ -14,8 +14,10 @@
                     <tr>
                         <td colspan="2" class="profile-user-img-area">
                             <% if @login_user.img? %>
+                            <% puts "icon is exist !!!!!!!!" %>
                                 <%= image_tag @login_user.img.url class: "profile-user-img" %>
                             <% else %>
+                            <% puts "icon is nothing !!!!!!!!" %>
                                 <img src="/assets/default_icon.jpg" alt="" class="profile-user-img" >
                             <% end %>
                         </td>

@@ -1,0 +1,57 @@
+<div class="hotel-regist-container">
+
+    <div class="hotel-regist-menu-list-area">
+        <ul class="hotel-regist-menu-list">
+            <li><span class="text-primary">基本情報</span></li>
+        </ul>
+    </div>
+    <div class="hotel-regist-info-area">
+        <div class="hotel-regist-info">
+            <p class="hotel-regist-info-title">ルーム情報登録</p>
+            <%= form_with url: hotels_path do |f| %>
+                <table class="hotel-regist-info-table">
+                    <tr>
+                        <th>
+                            ルーム名
+                            <span class="badge bg-danger">必須</span>
+                        </th>
+                        <td><%= f.text_field :name, class: "hotel-regist-name" %></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            ルーム紹介
+                            <span class="badge bg-danger">必須</span>
+                        </th>
+                        <td><%= f.text_area :discription, class: "hotel-regist-intro" %></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            料金/日
+                            <span class="badge bg-danger">必須</span>
+                        </th>
+                        <td><%= f.text_field :price, class: "hotel-regist-intro" %></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            住所
+                            <span class="badge bg-danger">必須</span>
+                        </th>
+                        <td><%= f.text_field :place, class: "hotel-regist-intro" %></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            ルーム画像
+                            <span class="badge bg-danger">必須</span>
+                        </th>
+                        <td>
+                            <%= f.file_field :image_icon, id: :hotel_img %>
+                            <p><%= f.check_box :remove_img, class: "hotel-image-remove" %>画像を削除する</p>
+                        </td>
+                    </tr>
+                </table>
+                <%= f.submit "登録", class: "btn btn-primary hotel-edit-btn" %>
+            <% end %>
+        </div>
+    </div>
+
+</div>
