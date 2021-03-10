@@ -55,10 +55,12 @@ class UsersController < ApplicationController
     update_user = User.find_by(id: params[:id])
     update_user.name = params[:name]
     update_user.self_introduction = params[:self_introduction]
+    update_user.img = params[:img]
+    update_user.remove_img = params[:remove_img]
 
     if update_user.save
       flash[:notice] = "更新成功しました"
-      render "/users/#{update_user.id}/profile"
+      redirect_to "/users/#{update_user.id}/profile"
     else
       flash[:notice] = "更新失敗しました"
       render "/users/#{update_user.id}/profile"
@@ -77,6 +79,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :img)
+    # params.require(:user).permit(:name, :email, :password, :img, :self_introduction)
+    params.permit(user: [:name, :img, :self_introduction])
   end
 end
