@@ -1,19 +1,36 @@
-<div class="signup-form-area">
-    <p>新しいアカウントを作成</p>
-    <%= form_with url: users_path do |f| %>
-        <div class="input-form">
-            <span class="badge bg-danger">必須</span><%= f.text_field :name, placeholder: 'ユーザー名', class: 'signup-name' %>
+<div class="reserve-conf-form-area">
+    <span class="reserve-conf-title">予約内容確認</span>
+    <hr>
+    <%= form_with url: reserve_infos_path do |f| %>
+        <div class="reserve-conf-input-form">
+        <span class="reserve-conf-price">¥ <%= @hotel.price %> /日</span>
+        <span class="reserve-conf-form-label">開始日</span>
+            <%= f.text_field :start_date, value: @new_reserve_info.start_date, class: 'reserve-conf-start', readonly: true %>
         </div>
-        <div class="input-form">
-            <span class="badge bg-danger">必須</span><%= f.text_field :email, placeholder: 'メールアドレス', class: 'signup-email' %> <br>
+        <div class="reserve-conf-input-form">
+        <span class="reserve-conf-form-label">終了日</span>
+            <%= f.text_field :end_date, class: 'reserve-conf-end', value: @new_reserve_info.end_date, readonly: true %> <br>
         </div>
-        <div class="input-form">
-            <span class="badge bg-danger">必須</span><%= f.text_field :password, placeholder: 'パスワード', class: 'signup-password' %> <br>
+        <div class="reserve-conf-input-form">
+            <span class="reserve-conf-use-days">使用日数：<%= @new_reserve_info.end_date - @new_reserve_info.start_date %>日</span>
+            <hr>
+            <span class="reserve-conf-num-label">人数：<%= @new_reserve_info.num_person %>人</span>
+            <%= f.number_field :num_person, value: @new_reserve_info.num_person, class: 'show-form-id' %>
+            <%= f.number_field :hotel_id, value: @hotel.id, class: 'show-form-id' %>
+            <%= f.number_field :user_id, value: session[:user_id], class: 'show-form-id' %>
+
+            <hr>
         </div>
-        <div class="input-form">
-            <span class="badge bg-danger">必須</span><%= f.text_field :password_confirmation, placeholder: 'パスワード確認', class: 'signup-password-confirmation' %> <br>
+        <div class="reserve-conf-input-form">
+        <span class="reserve-conf-form-label">合計金額</span>
+            <% puts @hotel.price.class %>
+            <% puts @new_reserve_info.num_person.class %>
+            <% price = @hotel.price * @new_reserve_info.num_person %>
+            <%= f.text_field :price, class: 'reserve-conf-total-price', value: price, readonly: true %> <br>
         </div>
-        <%= f.submit "新しいアカウントを作成", class: 'btn btn-primary' %> <br>
+        <p class="reserve-conf-disc">上記内容でよろしければ「予約を確定」を押してください</p>
+        <hr>
+        <%= f.submit "予約を確定", class: 'btn btn-primary reserve-btn' %> <br>
+        <%= link_to "ルーム詳細に戻る", hotel_path(@hotel.id), class: "btn btn-secondary" %>
     <% end %>
-    <%= link_to '既にアカウントをお持ちの方はログイン', '/users/sign_in', class: 'text-primary signup-link' %>
 </div>
