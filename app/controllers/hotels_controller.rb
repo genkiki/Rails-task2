@@ -8,16 +8,17 @@ class HotelsController < ApplicationController
   end
 
   def create
-    new_hotel = Hotel.new(user_id: session[:user_id],
-                          name: params[:name],
-                          place: params[:place],
-                          price: params[:price],
-                          discription: params[:discription])
+
+    new_hotel = Hotel.new(hotel_params)
 
     if new_hotel.save
       redirect_to hotel_path(new_hotel.id)
     else
       render new_hotel_path
     end
+  end
+
+  def hotel_params
+    params.permit(:user_id, :name, :place, :price, :discription, :image_icon, :remove_image_icon)
   end
 end

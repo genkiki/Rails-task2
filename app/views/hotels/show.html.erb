@@ -2,7 +2,7 @@
 
 <div class="show-container">
     <div class="show-top">
-        <img src="/assets/test_room.jpg" alt="" class="show-hotel-img">
+        <%= image_tag @hotel.image_icon.url, class: "show-hotel-img" %>
         <div class="show-reserve-info">
             <p>¥<%= @hotel.price %>/日</p>
 
@@ -22,7 +22,8 @@
 
     <div class="show-hotel-info">
         <div class="show-owner-icon-area">
-            <img src="/assets/default_icon.jpg" alt="" class="show-owner-icon">
+            <% ower_user = User.find_by(id: @hotel.user_id) %>
+            <%= image_tag ower_user.img.url, class: "show-owner-icon" %>
         </div>
         <div>
         <p class="show-hotel-name"><%= @hotel.name %></p>

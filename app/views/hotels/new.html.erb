@@ -9,6 +9,7 @@
         <div class="hotel-regist-info">
             <p class="hotel-regist-info-title">ルーム情報登録</p>
             <%= form_with url: hotels_path do |f| %>
+                <%= f.number_field :user_id, value: session[:user_id], class: 'show-form-id' %>
                 <table class="hotel-regist-info-table">
                     <tr>
                         <th>
@@ -45,7 +46,7 @@
                         </th>
                         <td>
                             <%= f.file_field :image_icon, id: :hotel_img %>
-                            <p><%= f.check_box :remove_img, class: "hotel-image-remove" %>画像を削除する</p>
+                            <p><%= f.check_box :remove_image_icon, class: "hotel-image-remove" %>画像を削除する</p>
                         </td>
                     </tr>
                 </table>
