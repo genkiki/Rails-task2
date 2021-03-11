@@ -51,14 +51,9 @@ class UsersController < ApplicationController
   end
 
   def profile_edit
-    puts "profile_edit start !!!!!!"
     update_user = User.find_by(id: params[:id])
-    update_user.name = params[:name]
-    update_user.self_introduction = params[:self_introduction]
-    update_user.img = params[:img]
-    update_user.remove_img = params[:remove_img]
 
-    if update_user.save
+    if update_user.update(user_params)
       flash[:notice] = "更新成功しました"
       redirect_to "/users/#{update_user.id}/profile"
     else
@@ -68,7 +63,6 @@ class UsersController < ApplicationController
   end
 
   def posts
-    puts 'start users#posts !!!!!!!!!!'
     @user_id = 1 #test code.
     @regist_hotels = Hotel.where(user_id: @user_id)
   end
@@ -78,8 +72,8 @@ class UsersController < ApplicationController
     redirect_to "/"
   end
 
+private
   def user_params
-    # params.require(:user).permit(:name, :email, :password, :img, :self_introduction)
-    params.permit(user: [:name, :img, :self_introduction])
+    params.permit(:name, :img, :remove_img, :self_introduction)
   end
 end
