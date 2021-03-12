@@ -12,7 +12,8 @@
             <%= f.text_field :end_date, class: 'reserve-conf-end', value: @new_reserve_info.end_date, readonly: true %> <br>
         </div>
         <div class="reserve-conf-input-form">
-            <span class="reserve-conf-use-days">使用日数：<%= @new_reserve_info.end_date - @new_reserve_info.start_date %>日</span>
+            <% use_days = (@new_reserve_info.end_date - @new_reserve_info.start_date).to_int %>
+            <span class="reserve-conf-use-days">使用日数：<%= use_days %>日</span>
             <hr>
             <span class="reserve-conf-num-label">人数：<%= @new_reserve_info.num_person %>人</span>
             <%= f.number_field :num_person, value: @new_reserve_info.num_person, class: 'show-form-id' %>
@@ -23,9 +24,7 @@
         </div>
         <div class="reserve-conf-input-form">
         <span class="reserve-conf-form-label">合計金額</span>
-            <% puts @hotel.price.class %>
-            <% puts @new_reserve_info.num_person.class %>
-            <% price = @hotel.price * @new_reserve_info.num_person %>
+            <% price = @hotel.price * @new_reserve_info.num_person * use_days %>
             <%= f.text_field :price, class: 'reserve-conf-total-price', value: price, readonly: true %> <br>
         </div>
         <p class="reserve-conf-disc">上記内容でよろしければ「予約を確定」を押してください</p>

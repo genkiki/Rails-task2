@@ -2,7 +2,6 @@ class ReserveInfosController < ApplicationController
 
   def new
     puts "start reserve info new !!!!!!"
-    params[:hotel_id] = 1#test code
     @hotel = Hotel.find_by(id: params[:hotel_id])
     price = @hotel.price * params[:num_person].to_i
 
