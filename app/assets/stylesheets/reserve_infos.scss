@@ -74,3 +74,36 @@
     margin-bottom: 20px;
 }
 
+// 予約完了画面
+
+.reserve-info-show-container {
+    padding: 100px 200px;
+    background-color: #F6F8F9;
+}
+
+.reserve-info-show-table {
+    width: 100%;
+    background-color: white;
+}
+
+.reserve-info-show-table tr {
+    border: 1px solid #e2e2e2;
+}
+
+.reserve-info-show-table tr th {
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    width: 200px
+}
+
+.reserve-info-show-table tr td {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.reserve-info-show-table tr th, .reserve-info-show-table tr td {
+    padding: 20px 30px 20px 30px;
+}

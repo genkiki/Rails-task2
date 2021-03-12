@@ -19,7 +19,7 @@ class ReserveInfosController < ApplicationController
     @new_reserve_info = ReserveInfo.new(reserve_info_params)
     if @new_reserve_info.save
       puts "new_reserve_info.save true !!!!!!"
-      redirect_to reserve_infos_path
+      redirect_to reserve_info_path(@new_reserve_info.id)
     else
       puts "new_reserve_info.save false !!!!!!"
       redirect_to hotel_path(@new_reserve_info.hotel_id)
@@ -28,6 +28,11 @@ class ReserveInfosController < ApplicationController
 
   def index
     @reserve_infos = ReserveInfo.where(user_id: session[:user_id])
+  end
+
+  def show
+    @reserve_info = ReserveInfo.find_by(id: params[:id])
+    @hotel = Hotel.find_by(id: @reserve_info.hotel.id)
   end
 
   private
