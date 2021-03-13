@@ -18,7 +18,13 @@
             <% @reserve_infos.each do |reserve| %>
                 <% hotel = Hotel.find_by(id: reserve.hotel_id) %>
                 <tr>
-                    <td class="image-icon-cell"><%= hotel.image_icon %></td>
+                    <td class="image-icon-cell">
+                        <% if hotel.image_icon? %>
+                            <%= image_tag hotel.image_icon.url, class:"image-icon-cell-img" %>
+                        <% else %>
+                            <img src="/assets/test_room.jpg" alt="" class="image-icon-cell-img">
+                        <% end %>
+                    </td>
                     <td class="name-cell">
                         <%= link_to hotel_path(hotel.id) do %>
                             <%= hotel.name %>

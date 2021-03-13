@@ -2,8 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// 検索結果画面
+
 .container {
-    padding: 30px 60px;
+    padding-top: 30px;
 }
 
 .index-result-count {
@@ -21,15 +23,18 @@
 
 .index-hotel {
     padding-top: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     margin-right: 15px;
     margin-bottom: 12px;
-    width: 22%;
+    width: 250px;
     border: 1px solid gray;
 }
 
 .index-img-hotel {
-    width: 100%;
+    width: 250px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
 .index-hotel-text-area {
@@ -60,6 +65,8 @@
     color: #333333;
 }
 
+// ホテル詳細画面
+
 .show-container {
     width: 1140px;
     margin-left: auto;
@@ -74,7 +81,8 @@
 
 .show-hotel-img {
     width: 750px;
-    height: auto;
+    height: 425px;
+    object-fit: contain;
     margin-right: 30px;
     display: inline-block;
 }

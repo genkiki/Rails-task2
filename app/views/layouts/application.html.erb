@@ -33,15 +33,21 @@
           <% current_user = User.find_by(id: session[:user_id]) %>
           <p class="header-user-name"><%= current_user.name %></p>
           <div class="hidden_box">
-              <label for="label1">メニュー</label>
-              <input type="checkbox" id="label1"/>
-              <ul class="hidden_show header-menu-list">
-                <li><%= link_to "ルーム登録", new_hotel_path %></li>
-                <li><%= link_to "予約済みルーム一覧", reserve_infos_path %></li>
-                <li><%= link_to "登録済みルーム一覧", "/users/#{current_user.id}/posts" %></li>
-                <li><%= link_to "設定", user_path(current_user.id) %></li>
-                <li><%= link_to "ログアウト", user_path(current_user.id), method: "delete" %></li>
-              </ul>
+            <label for="label1">
+              <% if current_user.img? %>
+                  <%= image_tag current_user.img.url, class:"header-user-icon", for: "label1" %>
+              <% else %>
+                  メニュー
+              <% end %>
+            </label>
+            <input type="checkbox" id="label1"/>
+            <ul class="hidden_show header-menu-list">
+              <li><%= link_to "ルーム登録", new_hotel_path %></li>
+              <li><%= link_to "予約済みルーム一覧", reserve_infos_path %></li>
+              <li><%= link_to "登録済みルーム一覧", "/users/#{current_user.id}/posts" %></li>
+              <li><%= link_to "設定", user_path(current_user.id) %></li>
+              <li><%= link_to "ログアウト", user_path(current_user.id), method: "delete" %></li>
+            </ul>
           </div>
         <% else %>
           <%= link_to 'ログイン', users_sign_in_path, class: 'btn btn-primary text-nowrap header-login-btn' %>

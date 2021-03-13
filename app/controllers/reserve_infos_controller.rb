@@ -1,5 +1,7 @@
 class ReserveInfosController < ApplicationController
 
+  before_action :authenticate_user
+
   def new
     puts "start reserve info new !!!!!!"
     @hotel = Hotel.find_by(id: params[:hotel_id])

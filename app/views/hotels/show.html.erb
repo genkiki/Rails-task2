@@ -19,7 +19,11 @@
                 <%= f.number_field :num_person , class: 'show-form-count' %>
                 <%= f.number_field :hotel_id, value: @hotel.id, class: 'show-form-id' %>
                 <%= f.number_field :user_id, value: session[:user_id], class: 'show-form-id' %>
-                <%= f.submit "予約する", class: 'btn btn-primary' %>
+                <% if session[:user_id] == nil %>
+                    <%= f.submit "ログイン", class: 'btn btn-primary' %>
+                <% else %>
+                    <%= f.submit "予約する", class: 'btn btn-primary' %>
+                <% end %>
             <% end %>
         </div>
     </div>

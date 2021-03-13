@@ -48,6 +48,13 @@ header {
     height: 40px;
 }
 
+.header-user-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
 .header-user-name {
     margin-top: 15px;
     color: white;
@@ -74,9 +81,9 @@ header {
     outline : none;
   }
 
-
-  /*全体*/
-
+.hidden_box {
+    z-index: 5;
+}
 
 /*ボタン装飾*/
 .hidden_box label {

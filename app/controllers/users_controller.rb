@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+
+  before_action :authenticate_user, {only: [:show, :profile, :profile_edit,
+                                            :posts, :destroy]}
+
   def new
   end
 
@@ -63,8 +67,7 @@ class UsersController < ApplicationController
   end
 
   def posts
-    @user_id = 1 #test code.
-    @regist_hotels = Hotel.where(user_id: @user_id)
+    @regist_hotels = Hotel.where(user_id: session[:user_id])
   end
 
   def destroy

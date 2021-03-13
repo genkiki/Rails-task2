@@ -49,8 +49,8 @@ h1 {
 }
 
 .recommend-area {
-    padding-left: 327px;
-    padding-right: 327px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 ul {
@@ -60,12 +60,16 @@ ul {
 }
 
 li:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 5%;
 }
 
 h2 {
     margin-top: 50px;
     margin-bottom: 35px;
+}
+
+.area {
+    position: relative;
 }
 
 .area-link {
@@ -79,3 +83,48 @@ h2 {
     border-radius: 5px;
 }
 
+.area-img-text {
+    position: absolute;
+    bottom: 20px;
+    left: 80px;
+    color: white;
+    font-size: 24px;
+    line-height: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.area-search-btn-tokyo,
+.area-search-btn-osaka,
+.area-search-btn-kyoto,
+.area-search-btn-hokkaido, {
+    height: 360px;
+    width: 231px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: none;
+}
+
+.area-search-btn-tokyo {
+    background: no-repeat center url(/assets/img_tokyo.jpg);
+    background-size: cover;
+}
+
+.area-search-btn-osaka {
+    background: no-repeat center url(/assets/img_osaka.jpg);
+    background-size: cover;
+}
+
+.area-search-btn-kyoto {
+    background: no-repeat center url(/assets/img_kyoto.jpg);
+    background-size: cover;
+}
+
+.area-search-btn-hokkaido {
+    background: no-repeat center url(/assets/img_sapporo.jpg);
+    background-size: cover;
+}
+
+.top-area-search-form {
+    display: none;
+}

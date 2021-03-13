@@ -13,23 +13,39 @@
     <h2>おすすめのエリア</h2>
     <ul class="area-list">
         <li class="area">
-            <%= link_to :hotels, class: "area-link" do %>
-                <img src="assets/img_tokyo.jpg" alt="" class="area-img">
+            <%= search_form_for @search, url: hotels_path do |f| %>
+                <div class="area-img-text">
+                    東京
+                </div>
+                <%= f.text_field :place_cont, value: "東京", class: 'top-area-search-form' %>
+                <%= f.submit '', class: 'area-search-btn-tokyo'%>
             <% end %>
         </li>
         <li class="area">
-            <%= link_to :hotels, class: "area-link" do %>
-                <img src="assets/img_osaka.jpg" alt="" class="area-img">
+            <%= search_form_for @search, url: hotels_path do |f| %>
+                <div class="area-img-text">
+                    大阪
+                </div>
+                <%= f.text_field :place_cont, value: "大阪", class: 'top-area-search-form' %>
+                <%= f.submit '', class: 'area-search-btn-osaka'%>
             <% end %>
         </li>
         <li class="area">
-            <%= link_to :hotels, class: "area-link" do %>
-                <img src="assets/img_kyoto.jpg" alt="" class="area-img">
+            <%= search_form_for @search, url: hotels_path do |f| %>
+                <div class="area-img-text">
+                    京都
+                </div>
+                <%= f.text_field :place_cont, value: "京都", class: 'top-area-search-form' %>
+                <%= f.submit '', class: 'area-search-btn-kyoto'%>
             <% end %>
         </li>
         <li class="area">
-            <%= link_to :hotels, class: "area-link" do %>
-                <img src="assets/img_sapporo.jpg" alt="" class="area-img">
+            <%= search_form_for @search, url: hotels_path do |f| %>
+                <div class="area-img-text">
+                    北海道
+                </div>
+                <%= f.text_field :place_cont, value: "北海道", class: 'top-area-search-form' %>
+                <%= f.submit '', class: 'area-search-btn-hokkaido'%>
             <% end %>
         </li>
     </ul>
