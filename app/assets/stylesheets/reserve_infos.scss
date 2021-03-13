@@ -1,0 +1,109 @@
+// Place all the styles related to the ReserveInfos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.reserve-conf-form-area {
+    width: 600px;
+    margin: 40px auto 100px;
+    padding: 20px 20px;
+    border: 1px solid gray;
+}
+
+.reserve-conf-form-area{
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.reserve-conf-title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.reserve-conf-price {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    display: block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.reserve-conf-link {
+    text-decoration: none;
+    margin-top: 23px;
+    text-align: center;
+    display: block;
+}
+
+.reserve-conf-form-label {
+    display: block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.reserve-conf-disc {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.reserve-conf-input-form {
+    margin-bottom: 25px;
+}
+
+.reserve-conf-price {
+    margin-bottom: 25px;
+}
+
+.reserve-conf-use-days, .reserve-conf-num-person {
+    text-align: left;
+}
+
+.reserve-conf-start, .reserve-conf-end, .reserve-conf-total-price, .reserve-conf- {
+    height: 38px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.reserve-btn {
+    margin-bottom: 20px;
+}
+
+// 予約完了画面
+
+.reserve-info-show-container {
+    padding: 100px 200px;
+    background-color: #F6F8F9;
+}
+
+.reserve-info-show-table {
+    width: 100%;
+    background-color: white;
+}
+
+.reserve-info-show-table tr {
+    border: 1px solid #e2e2e2;
+}
+
+.reserve-info-show-table tr th {
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    width: 200px
+}
+
+.reserve-info-show-table tr td {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.reserve-info-show-table tr th, .reserve-info-show-table tr td {
+    padding: 20px 30px 20px 30px;
+}

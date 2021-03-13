@@ -1,0 +1,13 @@
+<div class="signin-form-area">
+    <p>ログイン</p>
+    <%= form_with url: users_sign_in_path do |f| %>
+        <div class="input-form">
+            <span class="badge bg-danger">必須</span><%= f.text_field :email, placeholder: 'メールアドレス', class: 'signin-email' %> <br>
+        </div>
+        <div class="input-form">
+            <span class="badge bg-danger">必須</span><%= f.text_field :password, placeholder: 'パスワード', class: 'signup-password' %> <br>
+        </div>
+        <%= f.submit "ログイン", class: 'btn btn-primary' %> <br>
+    <% end %>
+    <%= link_to '新しいアカウントを作成', '/users/new', class: 'text-primary signin-link' %>
+</div>

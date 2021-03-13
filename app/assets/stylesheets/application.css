@@ -13,3 +13,123 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    padding: 5px;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    vertical-align: middle;
+}
+
+.header-right {
+    display: flex;
+    vertical-align: middle;
+}
+
+.header-register-btn {
+    margin-left: 15px;
+    margin-right: 40px;
+}
+
+
+.header-register-btn, .header-login-btn {
+    margin-top: 10px;
+    height: 40px;
+}
+
+.header-user-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.header-user-name {
+    margin-top: 15px;
+    color: white;
+}
+
+.place-form, .keyword-form {
+    margin-top: 15px;
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.search-btn{
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-size: 1.3em;
+    border: none;
+    background: none;
+    color: #3879D9;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    right: 0;
+    top: -10px;
+    outline : none;
+  }
+
+.hidden_box {
+    z-index: 5;
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+    cursor :pointer;
+}
+
+/*チェックは見えなくする*/
+.hidden_box input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+    padding: 10px 0px 10px 0px;
+    height: auto;
+    opacity: 1;
+}
+
+.header-menu-list {
+    display: block;
+    background-color: white;
+    margin-top: 15px;
+}
+
+.header-menu-list li {
+    margin-top: 5px;
+}
+
+.header-menu-list li a {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    height: 180px;
+    background-color: black;
+}

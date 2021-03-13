@@ -1,0 +1,52 @@
+<div class="hero">
+    <div class="entrance-area">
+        <h1>Hotel Reserveでまだ体験したことのない旅をしよう</h1>
+        <p>エリア</p>
+        <%= search_form_for @search, url: hotels_path do |f| %>
+            <%= f.text_field :place_cont, placeholder: '東京' , class: 'form_control search-text' %>
+            <%= f.submit '探す', class: 'top-search-btn'%>
+        <% end %>
+    </div>
+</div>
+
+<div class="recommend-area">
+    <h2>おすすめのエリア</h2>
+    <ul class="area-list">
+        <li class="area">
+            <%= search_form_for @search, url: hotels_path do |f| %>
+                <div class="area-img-text">
+                    東京
+                </div>
+                <%= f.text_field :place_cont, value: "東京", class: 'top-area-search-form' %>
+                <%= f.submit '', class: 'area-search-btn-tokyo'%>
+            <% end %>
+        </li>
+        <li class="area">
+            <%= search_form_for @search, url: hotels_path do |f| %>
+                <div class="area-img-text">
+                    大阪
+                </div>
+                <%= f.text_field :place_cont, value: "大阪", class: 'top-area-search-form' %>
+                <%= f.submit '', class: 'area-search-btn-osaka'%>
+            <% end %>
+        </li>
+        <li class="area">
+            <%= search_form_for @search, url: hotels_path do |f| %>
+                <div class="area-img-text">
+                    京都
+                </div>
+                <%= f.text_field :place_cont, value: "京都", class: 'top-area-search-form' %>
+                <%= f.submit '', class: 'area-search-btn-kyoto'%>
+            <% end %>
+        </li>
+        <li class="area">
+            <%= search_form_for @search, url: hotels_path do |f| %>
+                <div class="area-img-text">
+                    北海道
+                </div>
+                <%= f.text_field :place_cont, value: "北海道", class: 'top-area-search-form' %>
+                <%= f.submit '', class: 'area-search-btn-hokkaido'%>
+            <% end %>
+        </li>
+    </ul>
+</div>

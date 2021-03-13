@@ -1,0 +1,253 @@
+// Place all the styles related to the Hotels controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 検索結果画面
+
+.container {
+    padding-top: 30px;
+}
+
+.index-result-count {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
+}
+
+.index-search-result {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.index-hotel {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin-right: 15px;
+    margin-bottom: 12px;
+    width: 250px;
+    border: 1px solid gray;
+}
+
+.index-img-hotel {
+    width: 250px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.index-hotel-text-area {
+    padding-left: 15px;
+    padding-right: 10px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    line-height: 18px;
+}
+
+.index-name {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #909090;
+}
+
+.index-place {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+}
+
+.index-price {
+    text-align: right;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+}
+
+// ホテル詳細画面
+
+.show-container {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+
+.show-top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.show-hotel-img {
+    width: 750px;
+    height: 425px;
+    object-fit: contain;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.show-reserve-info {
+    width: 360px;
+    padding: 20px 20px 40px;
+    border: 1px solid gray;
+}
+
+.show-reserve-info p {
+    margin-bottom: 24px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.show-form-label {
+    margin-bottom: 10px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.show-form-calender, .show-form-count {
+    width: 100%;
+    margin-bottom: 25px;
+    height: 37px;
+    padding-left: 10px;
+}
+
+.show-form-id {
+    display: none;
+}
+
+.btn {
+    width: 100%;
+}
+
+.show-hotel-info {
+    display: flex;
+    margin-top: 28px;
+    margin-bottom: 30px;
+}
+
+.show-owner-icon {
+    border-radius: 50%;
+    width: 67px;
+    height: 67px;
+}
+
+.show-owner-icon-area {
+    margin-right: 27px;
+}
+
+.show-hotel-discription {
+    border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.show-hotel-name {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.show-hotel-place {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.show-hotel-discription {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+
+// ホテル登録画面
+
+.hotel-regist-container {
+    display: flex;
+}
+
+.hotel-regist-menu-list-area {
+    min-width: 15%;
+    border-right: 1px solid gray;
+}
+
+.hotel-regist-menu-list {
+    display: block;
+    margin-top: 40px;
+}
+
+.hotel-regist-menu-list li {
+    margin-bottom: 15px;
+}
+
+.hotel-regist-menu-list li a {
+    text-decoration: none;
+}
+
+.hotel-regist-info-area {
+    background-color: #F6F8F9;
+    width: 100%;
+    height: 800px;
+    padding: 30px 200px 0px 0px;
+}
+
+.hotel-regist-info {
+    max-width: 66%;
+    margin-left: 200px;
+    padding: 20px;
+    background-color: white;
+}
+
+.hotel-regist-edit-btn {
+    width: 140px;
+    margin-top: 20px;
+}
+
+.hotel-regist-info-table {
+    width: 100%;
+}
+
+.hotel-regist-info-table tr {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.hotel-regist-info-table tr th {
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    width: 200px
+}
+
+.hotel-regist-info-table tr td {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.hotel-regist-info-table tr th, .hotel-regist-info-table tr td {
+    padding: 20px 30px 20px 30px;
+}
+
+.hotel-img-area {
+    text-align: center;
+}
+
+.hotel-image-remove {
+    margin-top: 15px;
+}
+
+.hotel-regist-name, .hotel-regist-intro {
+    width: 100%;
+}

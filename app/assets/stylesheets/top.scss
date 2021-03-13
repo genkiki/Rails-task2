@@ -1,0 +1,130 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hero {
+    background-image: url(img_cover_top.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 180px 0px 180px 280px;
+}
+
+.entrance-area {
+    max-height: 290px;
+    max-width: 525px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 25px 25px 40px;
+}
+
+h1 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    line-height: 33px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.entrance-area p {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.search-text {
+    margin-bottom: 27px;
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 5px;
+}
+
+.top-search-btn {
+    width: 100%;
+    height: 35px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.recommend-area {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin-bottom: 75px;
+}
+
+li:not(:last-child) {
+    margin-right: 5%;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+.area {
+    position: relative;
+}
+
+.area-link {
+    display: block;
+}
+
+.area-img {
+    height: 360px;
+    width: 231px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.area-img-text {
+    position: absolute;
+    bottom: 20px;
+    left: 80px;
+    color: white;
+    font-size: 24px;
+    line-height: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.area-search-btn-tokyo,
+.area-search-btn-osaka,
+.area-search-btn-kyoto,
+.area-search-btn-hokkaido, {
+    height: 360px;
+    width: 231px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: none;
+}
+
+.area-search-btn-tokyo {
+    background: no-repeat center url(/assets/img_tokyo.jpg);
+    background-size: cover;
+}
+
+.area-search-btn-osaka {
+    background: no-repeat center url(/assets/img_osaka.jpg);
+    background-size: cover;
+}
+
+.area-search-btn-kyoto {
+    background: no-repeat center url(/assets/img_kyoto.jpg);
+    background-size: cover;
+}
+
+.area-search-btn-hokkaido {
+    background: no-repeat center url(/assets/img_sapporo.jpg);
+    background-size: cover;
+}
+
+.top-area-search-form {
+    display: none;
+}

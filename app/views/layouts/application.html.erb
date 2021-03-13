@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="styleshee">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>ReserveHotel</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +13,50 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-left">
+      <a href="/" class="top-link">
+        <img src="/assets/header-logo.jpg" alt="" class="img-logo">
+      </a>
+
+      <%= search_form_for @search, url: hotels_path do |f| %>
+        <%= f.text_field :place_cont, placeholder: 'エリア' , class: 'form_control place-form' %>
+        <%= f.submit '', class: 'search-btn'%>
+      <% end %>
+      <%= search_form_for @search, url: hotels_path do |f| %>
+        <%= f.text_field :name_cont, placeholder: 'キーワード' , class: 'form_control keyword-form' %>
+        <%= f.submit '', class: 'search-btn'%>
+      <% end %>
+      </div>
+      <div class="header-right">
+        <% if session[:user_id] %>
+          <% current_user = User.find_by(id: session[:user_id]) %>
+          <p class="header-user-name"><%= current_user.name %></p>
+          <div class="hidden_box">
+            <label for="label1">
+              <% if current_user.img? %>
+                  <%= image_tag current_user.img.url, class:"header-user-icon", for: "label1" %>
+              <% else %>
+                  メニュー
+              <% end %>
+            </label>
+            <input type="checkbox" id="label1"/>
+            <ul class="hidden_show header-menu-list">
+              <li><%= link_to "ルーム登録", new_hotel_path %></li>
+              <li><%= link_to "予約済みルーム一覧", reserve_infos_path %></li>
+              <li><%= link_to "登録済みルーム一覧", "/users/#{current_user.id}/posts" %></li>
+              <li><%= link_to "設定", user_path(current_user.id) %></li>
+              <li><%= link_to "ログアウト", user_path(current_user.id), method: "delete" %></li>
+            </ul>
+          </div>
+        <% else %>
+          <%= link_to 'ログイン', users_sign_in_path, class: 'btn btn-primary text-nowrap header-login-btn' %>
+          <%= link_to '登録する', new_user_path, class: 'btn btn-secondary text-nowrap header-register-btn' %>
+        <% end %>
+      </div>
+    </header>
     <%= yield %>
+    <footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   </body>
 </html>

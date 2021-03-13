@@ -1,0 +1,42 @@
+
+<div class="posts-hotel-container">
+    <h2 class="posts-hotel-title">予約済みルーム一覧</h2>
+
+    <table class="posts-hotel-list">
+        <thead>
+            <tr>
+                <th class="image-icon-header">ルーム画像</th>
+                <th class="name-header">ルーム名</th>
+                <th class="discription-header">ルーム紹介</th>
+                <th class="price-header">合計料金</th>
+                <th class="created-at-header">開始日</th>
+                <th class="created-at-header">終了日</th>
+                <th class="created-at-header">予約確定日時</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @reserve_infos.each do |reserve| %>
+                <% hotel = Hotel.find_by(id: reserve.hotel_id) %>
+                <tr>
+                    <td class="image-icon-cell">
+                        <% if hotel.image_icon? %>
+                            <%= image_tag hotel.image_icon.url, class:"image-icon-cell-img" %>
+                        <% else %>
+                            <img src="/assets/test_room.jpg" alt="" class="image-icon-cell-img">
+                        <% end %>
+                    </td>
+                    <td class="name-cell">
+                        <%= link_to hotel_path(hotel.id) do %>
+                            <%= hotel.name %>
+                        <% end %>
+                    </td>
+                    <td class="discription-cell"><%= hotel.discription %></td>
+                    <td class="price-cell"><%= reserve.price %></td>
+                    <td class="created-at-cell"><%= reserve.start_date %></td>
+                    <td class="created-at-cell"><%= reserve.end_date %></td>
+                    <td class="created-at-cell"><%= reserve.created_at %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>

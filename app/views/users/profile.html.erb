@@ -1,0 +1,54 @@
+<div class="user-show-container">
+
+    <div class="user-menu-list-area">
+        <ul class="user-menu-list">
+            <li><%= link_to "アカウント", user_path, class: "text-primary" %></li>
+            <li><%= link_to "プロフィール", "/users/#{@login_user.id}/profile", class: "text-secondary" %></li>
+        </ul>
+    </div>
+    <div class="user-info-area">
+        <div class="user-info">
+            <p class="user-info-title">プロフィール</p>
+            <%= form_with url: "/users/#{@login_user.id}/profile" do |f| %>
+                <table class="user-info-table">
+                    <tr>
+                        <td colspan="2" class="profile-user-img-area">
+                            <% if @login_user.img? %>
+                            <% puts "icon is exist !!!!!!!!" %>
+                                <%= image_tag @login_user.img.url class: "profile-user-img" %>
+                            <% else %>
+                            <% puts "icon is nothing !!!!!!!!" %>
+                                <img src="/assets/default_icon.jpg" alt="" class="profile-user-img" >
+                            <% end %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            アイコン画像
+                            <span class="badge bg-danger">必須</span>
+                        </th>
+                        <td>
+                            <%= f.file_field :img, id: :user_img, value: @login_user.img %>
+                            <p><%= f.check_box :remove_img, class: "user-image-remove" %>画像を削除する</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            名前
+                            <span class="badge bg-danger">必須</span>
+                        </th>
+                        <td><%= f.text_field :name, value: "#{@login_user.name}", class: "profile-user-name" %></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            自己紹介
+                            <span class="badge bg-danger">必須</span>
+                        </th>
+                        <td><%= f.text_area :self_introduction, value: "#{@login_user.self_introduction}", class: "profile-user-intro" %></td>
+                    </tr>
+                </table>
+                <%= f.submit "更新", class: "btn btn-primary user-edit-btn" %>
+            <% end %>
+        </div>
+    </div>
+</div>

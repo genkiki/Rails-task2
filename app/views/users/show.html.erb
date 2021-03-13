@@ -1,0 +1,26 @@
+<div class="user-show-container">
+
+    <div class="user-menu-list-area">
+        <ul class="user-menu-list">
+            <li><%= link_to "アカウント", user_path, class: "text-primary" %></li>
+            <li><%= link_to "プロフィール", "/users/#{@login_user.id}/profile", class: "text-secondary" %></li>
+        </ul>
+    </div>
+    <div class="user-info-area">
+        <div class="user-info">
+            <p class="user-info-title">アカウント</p>
+            <table class="user-info-table">
+                <tr>
+                    <th>メールアドレス</th>
+                    <td><%= @login_user.email %></td>
+                </tr>
+                <tr>
+                    <th>パスワード</th>
+                    <td>*********</td>
+                </tr>
+            </table>
+            <%= link_to "編集", edit_user_path(@login_user.id), class: "btn btn-primary user-edit-btn" %>
+        </div>
+    </div>
+
+</div>
